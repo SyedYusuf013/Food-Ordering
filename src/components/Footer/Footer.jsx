@@ -3,11 +3,16 @@ import { assets } from "../../assets/assets";
 
 const Footer = () => {
   return (
-    <div className="text-[#d9d9d9] bg-[#323232] flex flex-col items-center gap-5 pt-20 p-[20px_8vw] mt-[100px] " id="footer">
-      <div className="w-[100%] grid grid-cols-[2fr_1fr_1fr] gap-20 sm:flex sm:flex-col sm:gap-9"> 
-        <div className="flex flex-col items-start gap-5">
-          <img className="cursor-pointer" src={assets.logo} alt="" />
-          <p>
+    <div
+      className="text-[#d9d9d9] bg-[#323232] flex flex-col justify-between items-center gap-5 pt-20 px-[8vw] pb-10 mt-[100px]"
+      id="footer"
+    >
+      {/* Footer Main Content */}
+      <div className="flex flex-col justify-between w-full just gap-9 sm:flex-col md:flex-row md:gap-10 lg:gap-20">
+        {/* About Section */}
+        <div className="flex flex-col items-start flex-1 gap-5">
+          <img className="cursor-pointer" src={assets.logo} alt="Logo" />
+          <p className="text-sm lg:text-base">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
             praesentium, harum accusantium maxime, velit a voluptatibus, iure
             suscipit distinctio ut modi? Sequi sunt mollitia totam. Illum,
@@ -16,54 +21,64 @@ const Footer = () => {
           </p>
           <div className="flex flex-row">
             <img
-              className="w-10 mr-4 cursor-pointer"
+              className="w-8 h-8 mr-4 cursor-pointer sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
               src={assets.facebook_icon}
-              alt=""
+              alt="Facebook"
             />
             <img
-              className="w-10 mr-4 cursor-pointer"
+              className="w-8 h-8 mr-4 cursor-pointer sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
               src={assets.twitter_icon}
-              alt=""
+              alt="Twitter"
             />
             <img
-              className="w-10 mr-4 cursor-pointer"
+              className="w-8 h-8 mr-4 cursor-pointer sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
               src={assets.linkedin_icon}
-              alt=""
+              alt="LinkedIn"
             />
           </div>
         </div>
-        <div className="flex flex-col items-start gap-5">
-          <h2 className="text-2xl font-bold text-white">COMPANY</h2>
-          <ul>
-            <li className="list-none mb-[10px] cursor-pointer hover:text-white lg:hover:text-lg">
+
+        {/* Company Section */}
+        <div className="flex flex-col items-start flex-1 gap-5">
+          <h2 className="text-2xl font-bold text-white sm:text-lg md:text-xl">
+            COMPANY
+          </h2>
+          <ul className="text-sm lg:text-base">
+            <li className="mb-2 list-none cursor-pointer hover:text-white">
               Home
             </li>
-            <li className="list-none mb-[10px] cursor-pointer hover:text-white lg:hover:text-lg">
+            <li className="mb-2 list-none cursor-pointer hover:text-white">
               About us
             </li>
-            <li className="list-none mb-[10px] cursor-pointer hover:text-white lg:hover:text-lg">
+            <li className="mb-2 list-none cursor-pointer hover:text-white">
               Delivery
             </li>
-            <li className="list-none mb-[10px] cursor-pointer hover:text-white lg:hover:text-lg">
+            <li className="mb-2 list-none cursor-pointer hover:text-white">
               Privacy policy
             </li>
           </ul>
         </div>
-        <div className="flex flex-col items-start gap-5">
-          <h2 className="text-2xl font-bold text-white">GET IN TOUCH</h2>
-          <ul>
-            <li className="list-none mb-[10px] cursor-pointer hover:text-white lg:hover:text-lg">
+
+        {/* Get In Touch Section */}
+        <div className="flex flex-col items-start flex-1 gap-5">
+          <h2 className="text-2xl font-bold text-white sm:text-lg md:text-xl">
+            GET IN TOUCH
+          </h2>
+          <ul className="text-sm lg:text-base">
+            <li className="mb-2 list-none cursor-pointer hover:text-white">
               +91 7684513659
             </li>
-            <li className="list-none mb-[10px] cursor-pointer hover:text-white lg:hover:text-lg">
+            <li className="mb-2 list-none cursor-pointer hover:text-white">
               contact@tomato.com
             </li>
-            <li className="list-none mb-[10px] cursor-pointer hover:text-white lg:hover:text-lg">
+            <li className="mb-2 list-none cursor-pointer hover:text-white">
               Naya tola near halwapuri stall jagdamba firfuripur-6
             </li>
           </ul>
         </div>
       </div>
+
+      {/* Footer Bottom Section */}
       <div className="flex flex-col items-center lg:justify-between justify-center pt-4 mt-8 text-sm border-t border-gray-500 lg:flex-row text-[#7e7e7e] w-[100%]">
         <p>Copyright 2024 &copy; Tomato.com. All rights reserved.</p>
         <p className="text-sm text-center">

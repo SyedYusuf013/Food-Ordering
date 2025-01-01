@@ -6,13 +6,16 @@ const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
 
   return (
-    <div className="mt-[30px]">
-      <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl font-outfit">
+    <div className="mt-6 lg:mt-10">
+      {/* Heading */}
+      <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl lg:text-4xl font-outfit">
         Top dishes near you
       </h2>
-      <div className="mt-[30px] gap-[30px] gap-y-[50px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+      {/* Food Items Grid */}
+      <div className="grid grid-cols-1 gap-5 mt-6 sm:gap-6 md:gap-8 lg:gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {food_list.map((item, index) => {
-          if ((category === "All" || category === item.category)) {
+          if (category === "All" || category === item.category) {
             return (
               <FoodItem
                 key={index}
