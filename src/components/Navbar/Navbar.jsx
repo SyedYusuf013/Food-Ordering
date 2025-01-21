@@ -17,7 +17,7 @@ const Navbar = ({ setShowLogin }) => {
           alt="Logo"
         />
       </Link>
-      
+
       {/* Navbar Menu */}
       <ul className="hidden lg:flex md:flex gap-5 list-none text-[#49557e] lg:text-lg md:text-base">
         <Link
@@ -116,7 +116,9 @@ const Navbar = ({ setShowLogin }) => {
               href="#app-download"
               onClick={() => setMenu("mobile-app")}
               className={`pb-[2px] border-b-2 border-solid ${
-                menu === "mobile-app" ? "border-[#49557e]" : "border-transparent"
+                menu === "mobile-app"
+                  ? "border-[#49557e]"
+                  : "border-transparent"
               }`}
             >
               Mobile App
